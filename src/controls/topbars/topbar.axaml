@@ -1,0 +1,45 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="Auto"
+    x:Class="project_main.Topbar">
+
+
+    <Grid ColumnDefinitions="*,*,*,*,50" Classes="TopbarMain"> 
+        <Button Name="CalendarButton" Click="TBCalendarButton" Grid.Column="0" Classes="TopbarButton">
+            <StackPanel Classes="TopbarStack">
+                <Image Classes="TopbarButtonImage" Source="avares://project-main/src/assets/images/NEA_Calendar.png"></Image>
+                <TextBlock Classes="TopbarText BLFontClass" Text="{Binding calendarButtonText}"></TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Name="OverviewButton" Click="TBOverviewButton" Grid.Column="1" Classes="TopbarButton">
+            <StackPanel Classes="TopbarStack">
+                <Image Classes="TopbarButtonImage" Source="avares://project-main/src/assets/images/NEA_Overviews.png"></Image>
+                <TextBlock Classes="TopbarText BLFontClass" Text="{Binding overviewButtonText}"></TextBlock>
+            </StackPanel>
+        </Button>
+        
+        <Button Name="GoalsButton" Click="TBGoalsButton" Grid.Column="2" Classes="TopbarButton">
+            <StackPanel Classes="TopbarStack">
+                <Image Classes="TopbarButtonImage" Source="avares://project-main/src/assets/images/NEA_Goals.png"></Image>
+                <TextBlock Classes="TopbarText BLFontClass" Text="{Binding goalsButtonText}"></TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Name="PrefButton" Click="TBPrefButton" Grid.Column="3" Classes="TopbarButton">
+            <StackPanel Classes="TopbarStack">
+                <Image Classes="TopbarButtonImage" Source="avares://project-main/src/assets/images/NEA_Preferences.png"></Image>
+                <TextBlock Classes="TopbarText BLFontClass" Text="{Binding prefButtonText}"></TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Name="ReturnButton" Click="TBReturnButton" Grid.Column="4" Classes="ReturnButton">
+            <StackPanel Classes="TopbarStack">
+                <Image Classes="ReturnButtonImage" Source="avares://project-main/src/assets/images/NEA_Init.png"></Image>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</UserControl>

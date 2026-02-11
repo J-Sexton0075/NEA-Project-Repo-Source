@@ -1,0 +1,19 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="350"
+    x:Class="project_main.GoalsPageHeaderBlock"
+    DockPanel.Dock="Top">
+                    
+        <Grid Name="LSEHead" Classes="LSEHead" DockPanel.Dock="Top" ColumnDefinitions="5*,*,*,*,*,*,*">
+            <TextBlock Name="LSEHText1" Classes="LSEHText" Text="{Binding LSEHT1}" Grid.Column="0"/>
+            <TextBlock Name="LSEHText2" Classes="LSEHText" Text="{Binding LSEHT2}" Grid.Column="1"/>
+            <TextBlock Name="LSEHText3" Classes="LSEHText" Text="{Binding LSEHT3}" Grid.Column="2"/>
+            <TextBlock Name="LSEHText4" Classes="LSEHText" Text="{Binding LSEHT4}" Grid.Column="3"/>
+            <TextBlock Name="LSEHText5" Classes="LSEHText" Text="{Binding LSEHT5}" Grid.Column="4"/>
+            <TextBlock Name="LSEHText6" Classes="LSEHText" Text="{Binding LSEHT6}" Grid.Column="5"/>
+            <TextBlock Name="LSEHText7" Classes="LSEHText" Text="{Binding LSEHT7}" Grid.Column="6"/>
+        </Grid>
+
+</UserControl>

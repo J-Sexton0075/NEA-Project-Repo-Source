@@ -1,0 +1,78 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="400"
+    x:Class="project_main.EventView">
+
+    <Grid Name="EVMain" Classes="EVMain" RowDefinitions="*,*,*,5*,*">
+
+        <Grid Name="EV0Title" Classes="EV0Title EVDataBar" Grid.Row="0" ColumnDefinitions="*,50,50">
+            <DockPanel Name="EVTitleBox" Classes="EVTitleBox" Grid.Column="0">
+                <TextBlock Name="EVTitleText" Classes="EVTitleText EVDataBox BLFontClass"/>
+            </DockPanel>
+
+            <Button Name="EVEditButton" Classes="EVButton" Grid.Column="1" Click="EditOnClick">
+                <StackPanel Name="EVEditButtonStack" Classes="EVButtonStack">
+                    <Image Classes="EVButtonImage" Source="avares://project-main/src/assets/images/NEA_Goals.png"/>
+                </StackPanel>
+            </Button>
+
+            <Button Name="EVExitButton" Classes="EVButton" Grid.Column="2" Click="ExitOnClick">
+                <StackPanel Name="EVExitButtonStack" Classes="EVButtonStack">
+                    <Image Classes="EVButtonImage" Source="avares://project-main/src/assets/images/NEA_Init.png"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+
+        <Grid Name="EV1Times" Classes="EV1Times EVDataBar" Grid.Row="1" ColumnDefinitions="*,*">
+            <DockPanel Name="EVStartBox" Grid.Column="0">
+                <TextBlock Name="EVStartTime" Classes="EVStartTime EVDataBox BLFontClass"/>
+            </DockPanel>
+
+            <DockPanel Name="EVEndBox" Grid.Column="1">
+                <TextBlock Name="EVEndTime" Classes="EVEndTime EVDataBox BLFontClass"/>
+            </DockPanel>
+        </Grid>
+
+        <Grid Name="EV2Details" Classes="EV2Details EVDataBar" Grid.Row="2" ColumnDefinitions="*,*,*,*">
+            <DockPanel Name="EVTypeBox" Classes="EVTypeBox" Grid.Column="0">
+                <TextBlock Name="EVType" Classes="EVType EVDataBox BLFontClass"/>
+            </DockPanel>
+
+            <DockPanel Name="EVPriorityBox" Classes="EVPriorityBox" Grid.Column="1">
+                <TextBlock Name="EVPriority" Classes="EVPriority EVDataBox BLFontClass"/>
+            </DockPanel>
+
+            <DockPanel Name="EVOverlapConfirmation" Classes="EVOverlapConfirmation" Grid.Column="2">
+                <TextBlock Name="EVIsOverlap" Classes="EVIsOverlap EVDataBox BLFontClass"/>
+            </DockPanel>
+
+            <DockPanel Name="EVCompleteConfirmation" Classes="EVCompleteConfirmation" Grid.Column="3">
+                <TextBlock Name="EVIsComplete" Classes="EVIsComplete EVDataBox BLFontClass"/>
+            </DockPanel>
+        </Grid>
+
+        <Grid Name="EV3Desc" Classes="EV3Desc EVDataBar" Grid.Row="3">
+            <Border Name="EVDescBorder" Classes="EVDescBorder">
+                <TextBlock Name="EVDescBox" Classes="EVDescBox EVDataBox BLFontClass"/>
+            </Border>
+        </Grid> 
+
+        <Grid Name="EV4Additional" Classes="EV4Additional EVDataBar" Grid.Row="4" ColumnDefinitions="*, *">
+            <DockPanel Name="EVComplete" Classes="EVComplete" Grid.Column="0" LastChildFill="True"> 
+                <CheckBox Name="EVCompleteEvent" Classes="EVCompleteEvent" Click="CompleteCheckboxOnCLick" DockPanel.Dock="Left"/>
+                <TextBlock Name="EVCompleteEventText" Classes="EVCompleteEventText EVAdditionalText BLFontClass" Text="{Binding checkbuttonText}" DockPanel.Dock="Right"/>
+            </DockPanel>
+
+            <DockPanel Name="EVOverlaps" Classes="EVOverlaps" Grid.Column="1" LastChildFill="True">
+                <ComboBox Name="EVOverlappedEvents" Classes="EVOverlappedEvents" DockPanel.Dock="Left"/>
+                <Button Name="EVOverlappedButton" Classes="EVOverlappedButton" Click="OverlappedButtonOnClick" DockPanel.Dock="Right">
+                    <TextBlock Name="EVOvButtonText" Classes="EVAdditionalText BLFontClass" Text="{Binding overlappedButtonText}"/>
+                </Button>
+            </DockPanel>
+        </Grid>
+
+    </Grid>
+
+</UserControl>

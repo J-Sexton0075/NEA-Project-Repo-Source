@@ -1,0 +1,33 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+<!-- Colours for the initiaL page. Note this depends on the user's default colour scheme.-->
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key='Light'>
+            <SolidColorBrush x:Key='InitPrimary'>#ffffff</SolidColorBrush>
+            <SolidColorBrush x:Key='InitSecondary'>#c7c7c7</SolidColorBrush>
+            <SolidColorBrush x:Key='InitText'>#000000</SolidColorBrush>
+        </ResourceDictionary>
+        <ResourceDictionary x:Key='Dark'>
+            <SolidColorBrush x:Key='InitPrimary'>#333333</SolidColorBrush>
+            <SolidColorBrush x:Key='InitSecondary'>#3d3d3d</SolidColorBrush>
+            <SolidColorBrush x:Key='InitText'>#ffffff</SolidColorBrush>
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+
+    <!-- Resources that'll be updated based on preferences-->
+    <SolidColorBrush x:Key='ThemePrimary'>#f4f8f7</SolidColorBrush> 
+    <SolidColorBrush x:Key='ThemeSecondary'>#70a49d</SolidColorBrush>
+    <SolidColorBrush x:Key='ThemeText'>#192622</SolidColorBrush>
+    <SolidColorBrush x:Key='ThemeAccent'>#19fcd7</SolidColorBrush>
+    <SolidColorBrush x:Key='ThemeWarning'>#dc143c</SolidColorBrush>
+    
+    <SolidColorBrush x:Key='Debug1'>#ff00ff</SolidColorBrush>
+    <SolidColorBrush x:Key='Debug2'>#00ffff</SolidColorBrush>
+    <SolidColorBrush x:Key='Debug3'>#ffff00</SolidColorBrush>
+    
+    <!-- Fonts! -->
+    <FontFamily x:Key="ProximaRegular">assets\fonts\proximanova_regular.ttf</FontFamily>
+    
+    
+</ResourceDictionary>

@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="400"
+    x:Class="project_main.CalendarDayDetail">
+    
+
+    <Border Name="CDDBorder" Classes="CDDBorder">
+    <Grid Name="CDDMain" Classes="CDDPanel" RowDefinitions="20,*">
+        
+        <DockPanel Grid.Row="0" Name="CDDHeader" Classes="CDDHeader">
+            <TextBlock Name="CDDTextHeader" Classes="CDDTextHeader BLFontClass"/>
+        </DockPanel>
+
+        <Grid Grid.Row="1" Name="CDDMainOuterGrid" Classes="CDDMainOuterGrid"> 
+            
+            <Grid Grid.Column="0" Name="CDDTimeSidebar" Classes="CDDTimeSidebar">
+            </Grid>
+
+            <Grid Grid.Column="1" Name="CDDMainInnerGrid" Classes="CDDMainInnerGrid"> 
+            
+            </Grid> 
+
+        </Grid>
+        
+    </Grid>
+    </Border>
+
+</UserControl>
+
+

@@ -1,0 +1,93 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="400"
+    x:Class="project_main.EventCreate">
+
+    <Grid Name="ECMain" Classes="ECMain" RowDefinitions="50,*,50">
+        
+        <Grid Name="ECTitle" Classes="EC0Title ECInputArea" Grid.Row="0" ColumnDefinitions="100,*">
+            <TextBlock Name="ECTitleText"  Classes="BLFontClass ECInputText" Text="{Binding ECTitleTextBinding}" Grid.Column="0"/>
+            <TextBox Name="ECTitleInput" Watermark="{Binding ECTitleWatermark}" Classes="BOFontClass ECInputBox" Grid.Column="1"/>
+        </Grid>
+
+        <Grid Name="ECMainDetails" Classes="EC1Details ECInputArea" Grid.Row="1" ColumnDefinitions="*,4*">
+
+            <Grid Name="ECDetailsSidebar" Classes="EC10DetailsSidebar EC1EmbeddedInputArea" Grid.Column="0" RowDefinitions="*,*,*,*,*">
+                <DockPanel Name="ECDetailsStart" Classes="ECDetailsBarElement ECDetailsDate" Grid.Row="0" >
+                    <TextBlock Name="ECDStartText" Classes="BLFontClass ECLabelText" Text="{Binding ECDStartTextBinding}" DockPanel.Dock="Top"/>
+                    <DatePicker Name="ECDStartPicker" Classes="ECDDatePicker" DockPanel.Dock="Bottom"/>
+                    <TimePicker Name="ECDStartPickerTime" Classes="ECDTimePicker" DockPanel.Dock="Bottom"/>
+                </DockPanel>
+                <DockPanel Name="ECDetailsEnd" Classes="ECDetailsBarElement ECDetailsDate" Grid.Row="1">
+                    <TextBlock Name="ECDEndText" Classes="BLFontClass ECLabelText" Text="{Binding ECDEndTextBinding}" DockPanel.Dock="Top"/>
+                    <DatePicker Name="ECDEndPicker" Classes="ECDDatePicker" DockPanel.Dock="Bottom"/>
+                    <TimePicker Name="ECDEndPickerTime" Classes="ECDTimePicker" DockPanel.Dock="Bottom"/>
+                </DockPanel>
+                <DockPanel Name="ECDetailsType" Classes="ECDetailsBarElement" Grid.Row="2">
+                    <TextBlock Name="ECDTypeText" Classes="BLFontClass ECLabelText" Text="{Binding ECDTypeTextBinding}" DockPanel.Dock="Top"/>
+                    <ComboBox Name="ECDTypeComboBox" Classes="ECDComboBox" SelectionChanged="TriggerAutomaticSchedulerShow" DockPanel.Dock="Bottom"/>
+                </DockPanel>
+                <DockPanel Name="ECDetailsCompletable" Classes="ECDetailsBarElement" Grid.Row="3">
+                    <TextBlock Name="ECDCompletableText" Classes="BLFontClass ECLabelText" Text="{Binding ECDCompletableTextBinding}" DockPanel.Dock="Left"/>
+                    <CheckBox Name="ECDCompletableBox" Classes="ECDCheckBox" DockPanel.Dock="Right"/>
+                </DockPanel>
+                <DockPanel Name="ECDetailsPriority" Classes="ECDetailsBarElement" Grid.Row="4">
+                    <TextBlock Name="ECDPriorityText" Classes="BLFontClass ECLabelText" Text="{Binding ECDPriorityTextBinding}" DockPanel.Dock="Left"/>
+                    <TextBox Name="ECDPriorityBox" Classes="BOFontClass ECInputBox ECDPrioirtyBox" DockPanel.Dock="Right"/>
+                </DockPanel>
+            </Grid>
+
+            <Grid Name="ECDetailsBlock" Classes="EC11DetailsBlock EC1EmbeddedInputArea" Grid.Column="1" RowDefinitions="*,*">
+                <Grid Name="ECDetailsBlockDescription" Classes="EC110DetailsBlockDescription EC1EmbeddedInputArea" Grid.Row="0" RowDefinitions="50,*">
+                    <TextBlock Name="ECDetailsText" Classes="BLFontClass ECInputText" Text="{Binding ECDetailsTextBinding}" Grid.Row="0"/>
+                    <TextBox Name="ECDescriptionInput" Watermark="{Binding ECDetailsWatermark}" AcceptsReturn="True" Classes="BOFontClass ECInputBox" Grid.Row="1"/>   
+                </Grid>
+
+                <Grid Name="ECDetailsBlockAdditions" Classes="EC111DetailsBlockAdditions EC1EmbeddedInputArea" Grid.Row="2" ColumnDefinitions="*,*">
+                    <DockPanel Name="ECAdditionsRepeated" Classes="ECAdditionsRepeated ECAdditions" Grid.Column="0">
+                        <TextBlock Name="ECARTextLabel" Classes="BLFontClass ECInputText" Text="{Binding ECARTextBinding}" DockPanel.Dock="Top"/>
+                        <Grid Name="ECARRepeat" Classes="ECARGrid" ColumnDefinitions="2*,*,2*" DockPanel.Dock="Top"> 
+                            <TextBlock Name="ECARTextDescriptor1" Classes="BLFontClass ECLabelText" Text="{Binding ECARDescription1Binding}" Grid.Column="0"/>
+                            <TextBox Name="ECARInterval" Classes="BOFontClass ECInputBox ECARIntervalBox" Grid.Column="1"/>
+                            <ComboBox Name="ECARClass" Classes="ECARClassComboBox" Grid.Column="2" ItemsSource="{Binding ECARIntervalClassesBinding}"/>
+                        </Grid>
+                        <Grid Name="ECAREnd" Classes="ECARGrid" RowDefinitions="*,2*" DockPanel.Dock="Top">
+                            <TextBlock Name="ECARTextDescriptor3" Classes="BLFontClass ECLabelText" Text="{Binding ECARDescription3Binding}" Grid.Row="0"/>
+                            <DatePicker Name="RepeatRangeEnd" Classes="ECDDatePicker ECDDPCentre" Grid.Row="1"/>
+                        </Grid>
+                        <Grid Name="ECARExclude" Classes="ECARGrid" RowDefinitions="*,*" DockPanel.Dock="Top">
+                            <DockPanel Name="ECARExcludeRow0" Grid.Row="0">
+                                    <TextBlock Name="ECARTextDescriptor2" Classes="BLFontClass ECLabelText" Text="{Binding ECARDescription2Binding}" DockPanel.Dock="Left"/>
+                                    <Button Name="ECARAddExclusion" Classes="ECARExcludeButton BUFontClass" Content="{Binding ECARButtonAddExclusionBinding}" Click="ExcludeRange" DockPanel.Dock="Right"/> 
+                            </DockPanel>
+                            <DockPanel Name="CARExlcludeRow1" Grid.Row="1">
+                                <!-- Insert in two date pickers here.  -->
+                                <DatePicker Name="ExcludeRangeStartPicker" Classes="ECDDatePicker"/>
+                                <DatePicker Name="ExcludeRangeEndPicker" Classes="ECDDatePicker"/>
+                            </DockPanel>
+                        </Grid>
+                        <ScrollViewer Name="ECARScroll"><DockPanel Name="ECARExcluded" Classes="ECARExcluded" DockPanel.Dock="Bottom">
+                        </DockPanel></ScrollViewer>
+                    </DockPanel>
+                    <DockPanel Name="ECAdditionsScheduler" Classes="ECAdditionsScheduler ECAdditions" Grid.Column="1">
+                        <TextBlock Name="ECASTextLabel" Classes="BLFontClass ECInputText" Text="{Binding ECASTextBinding}" DockPanel.Dock="Top"/>
+                        <TextBlock Name="ECASTextStatus" Classes="BLFontClass ECLabelText" Text="{Binding ECASStatusBinding}" DockPanel.Dock="Top"/>
+                        <ScrollViewer Name="ECASScroll"> <DockPanel Name="ECASSuggestions" Classes="ECASSuggestions" DockPanel.Dock="Bottom">
+                        </DockPanel></ScrollViewer>
+                    </DockPanel>    
+                </Grid>
+            </Grid>
+
+        </Grid>
+
+        <Grid Name="ECButtonBar" Classes="EC2ButtonBar ECInputArea" Grid.Row="2" ColumnDefinitions="*,*,2*">
+            <Button Name="ECButtonClose" Classes="ECButton BUFontClass" Content="{Binding CloseButtonTextBinding}" Click="ClosePage" Grid.Column="0"/>
+            <Button Name="ECButtonCreate" Classes="ECButton BUFontClass" Content="{Binding CreateButtonTextBinding}" Click="CreateEvent" Grid.Column="1"/>
+            <TextBlock Name="ECAlertText" Classes="ECAlertText BLFontClass" Grid.Column="2"/>
+        </Grid>
+
+    </Grid>
+    
+</UserControl>

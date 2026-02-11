@@ -1,0 +1,88 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:project_main"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="350"
+    x:Class="project_main.PrefPage">
+
+    <Grid Name="PrefMain" Classes="PrefMain" RowDefinitions="*,*" ColumnDefinitions="*,*">
+        <Grid Name="PMColourSchemes" Classes="PMInnerGrid" Grid.Column="0" Grid.Row="0" RowDefinitions="*,*,*,*" ColumnDefinitions="*,*">
+            <!-- There are lots of these. -->
+            <local:PrefPageColourScheme Name="PMCS1" Grid.Column="0" Grid.Row="0"/>
+            <local:PrefPageColourScheme Name="PMCS2" Grid.Column="0" Grid.Row="1"/>
+            <local:PrefPageColourScheme Name="PMCS3" Grid.Column="0" Grid.Row="2"/>
+            <local:PrefPageColourScheme Name="PMCS4" Grid.Column="0" Grid.Row="3"/>
+            <local:PrefPageColourScheme Name="PMCS5" Grid.Column="1" Grid.Row="0"/>
+            <local:PrefPageColourScheme Name="PMCS6" Grid.Column="1" Grid.Row="1"/>
+            <local:PrefPageColourScheme Name="PMCS7" Grid.Column="1" Grid.Row="2"/>
+            <local:PrefPageColourScheme Name="PMCS8" Grid.Column="1" Grid.Row="3"/>
+        </Grid>
+
+        <Grid Name="PMColourCustom" Classes="PMInnerGrid" Grid.Column="0" Grid.Row="1" RowDefinitions="*,*,*,*,*,*,*,*">
+            <Grid Name="PMCCPrimary" Classes="PMCC" Grid.Row="0" ColumnDefinitions="*,*,3*">
+                <TextBlock Classes="PMCCLabel BLFontClass" Text="{Binding PMCCPrimaryText}" Grid.Column="0"/>
+                <TextBox Name="PMCCHexPrimary" Classes="PMCCHex BasicTextBox BOFontClass" Watermark="{Binding HexTextWatermark}"  Grid.Column="1"/>
+                <Rectangle Name="PMCCPreviewPrimary" Classes="PMCCPreview" Grid.Column="2"/>
+            </Grid>
+            <Grid Name="PMCCSecondary" Classes="PMCC" Grid.Row="1" ColumnDefinitions="*,*,3*">
+                <TextBlock Classes="PMCCLabel BLFontClass" Text="{Binding PMCCSecondaryText}" Grid.Column="0"/>
+                <TextBox Name="PMCCHexSecondary" Classes="PMCCHex BasicTextBox BOFontClass" Watermark="{Binding HexTextWatermark}"  Grid.Column="1"/>
+                <Rectangle Name="PMCCPreviewSecondary" Classes="PMCCPreview" Grid.Column="2"/>
+            </Grid>
+            <Grid Name="PMCCText" Classes="PMCC" Grid.Row="2" ColumnDefinitions="*,*,3*">
+                <TextBlock Classes="PMCCLabel BLFontClass" Text="{Binding PMCCTextText}" Grid.Column="0"/>
+                <TextBox Name="PMCCHexText" Classes="PMCCHex BasicTextBox BOFontClass" Watermark="{Binding HexTextWatermark}"  Grid.Column="1"/>
+                <Rectangle Name="PMCCPreviewText" Classes="PMCCPreview" Grid.Column="2"/>
+            </Grid>
+            <Grid Name="PMCCAccent" Classes="PMCC" Grid.Row="3" ColumnDefinitions="*,*,3*">
+                <TextBlock Classes="PMCCLabel BLFontClass" Text="{Binding PMCCAccentText}" Grid.Column="0"/>
+                <TextBox Name="PMCCHexAccent" Classes="PMCCHex BasicTextBox BOFontClass" Watermark="{Binding HexTextWatermark}"  Grid.Column="1"/>
+                <Rectangle Name="PMCCPreviewAccent" Classes="PMCCPreview" Grid.Column="2"/>
+            </Grid>
+            <Grid Name="PMCCAlertTop" Classes="PMCC" Grid.Row="4" ColumnDefinitions="*,*,3*">
+                <TextBlock Classes="PMCCLabel BLFontClass" Text="{Binding PMCCAlertTopText}" Grid.Column="0"/>
+                <TextBox Name="PMCCHexAlertTop" Classes="PMCCHex BasicTextBox BOFontClass" Watermark="{Binding HexTextWatermark}"  Grid.Column="1"/>
+                <Rectangle Name="PMCCPreviewAlertTop" Classes="PMCCPreview" Grid.Column="2"/>
+            </Grid>
+            <Grid Name="PMCCAlertMid" Classes="PMCC" Grid.Row="5" ColumnDefinitions="*,*,3*">
+                <TextBlock Classes="PMCCLabel BLFontClass" Text="{Binding PMCCAlertMidText}" Grid.Column="0"/>
+                <TextBox Name="PMCCHexAlertMid" Classes="PMCCHex BasicTextBox BOFontClass" Watermark="{Binding HexTextWatermark}"  Grid.Column="1"/>
+                <Rectangle Name="PMCCPreviewAlertMid" Classes="PMCCPreview" Grid.Column="2"/>
+            </Grid>
+            <Grid Name="PMCCAlertLow" Classes="PMCC" Grid.Row="6" ColumnDefinitions="*,*,3*">
+                <TextBlock Classes="PMCCLabel BLFontClass" Text="{Binding PMCCAlertLowText}" Grid.Column="0"/>
+                <TextBox Name="PMCCHexAlertLow" Classes="PMCCHex BasicTextBox BOFontClass" Watermark="{Binding HexTextWatermark}"  Grid.Column="1"/>
+                <Rectangle Name="PMCCPreviewAlertLow" Classes="PMCCPreview" Grid.Column="2"/>
+            </Grid>
+            <Button Name="PMCCSubmit" Classes="PMCCSubmit BUFontClass" Click="SetColourSchemeCustom" Content="{Binding SubmitCustomColourButtonText}" Grid.Row="7"/>
+        </Grid>
+
+        <Grid Name="PMTypes" Classes="PMInnerGrid" Grid.Column="1" Grid.Row="0" RowDefinitions="*,6*">
+            <TextBlock Name="PMTTextBlock" Classes="PMTTextBlock BLFontClass" Text="{Binding TypeText}" Grid.Row="0"/>
+            <Border Name="PMTBorder" Classes="PMTBorder" Grid.Row="1"><ScrollViewer Name="PMTScroll" Classes="PMTScroll">
+                <DockPanel Name="PMTTypePanel" Classes="PMTTypePanel"/>
+            </ScrollViewer></Border>
+        </Grid>
+
+        <Grid Name="PMOther" Classes="PMInnerGrid" Grid.Column="1" Grid.Row="1" RowDefinitions="*,*,*,*">
+            <TextBlock Name="PMOErrorBlock" Classes="PMOText BLFontClass" Grid.Row="0"/>
+            <Grid Name="PMONewType" Classes="PMOGrid" Grid.Row="1" ColumnDefinitions="*,*,*,*">
+                <TextBox Name="PMONTTypeName" Watermark="{Binding TypeTextWatermark}" Classes="PMONTBox BasicTextBox BOFontClass" Grid.Column="0"/>
+                <TextBox Name="PMONTTypeHex" Watermark="{Binding HexTextWatermark}" TextChanged="CustomTypePreviewUpdated" Classes="PMONTBox BasicTextBox BOFontClass" Grid.Column="1"/>
+                <TextBlock Name="PMONTPreview" Text="{Binding PreviewText}"  Classes="PMONTPreview BLFontClass" Grid.Column="2"/>
+                <Button Name="PMONTButton" Click="AddCustomType" Content="{Binding CustomTypeButtonText}" Classes="BUFontClass PMOButton" Grid.Column="3"/>
+            </Grid>
+            <Grid Name="PMOButtons1" Classes="PMOGrid" Grid.Row="2" ColumnDefinitions="*,*,*,2*">
+                <TextBlock Name="PMO1StreamlinedText" Text="{Binding StreamlinedModeText}" Classes="PMOText BLFontClass" Grid.Column="0"/>
+                <ToggleSwitch Name="PMO1StreamlinedSwitch" Click="ChangeStreamlined" Classes="PMO1StreamlinedSwitch" Grid.Column="1"/>
+                <Button Name="PMO1SaveButton" Classes="PMOButton BUFontClass" Click="SaveChanges" Content="{Binding SaveButtonText}" Grid.Column="3"/>
+            </Grid>
+            <Grid Name="PMOButtons2" Classes="PMOGrid" Grid.Row="3" ColumnDefinitions="2*,*,2*">
+                <Button Name="PMO2DeleteButton" Classes="UnfriendlyButton PMOButton BUFontClass" Click="DeleteButtonPressed" Content="{Binding DeleteButtonText}" Grid.Column="0"/>
+                <Button Name="PMO2ClearButton" Classes="PMOButton BUFontClass" Click="ClearChanges" Content="{Binding ClearButtonText}" Grid.Column="2"/>    
+            </Grid>
+        </Grid>
+    </Grid>
+
+</UserControl>

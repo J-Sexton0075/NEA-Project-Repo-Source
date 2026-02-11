@@ -1,0 +1,68 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:project_main"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="project_main.MainWindow"
+        Title="project_main">
+
+        <Grid>
+
+
+        <DockPanel Name="PageInit" IsVisible="{Binding InitalPageInitialVis}">
+        <local:InitialPage Name="PageInitUC"/>  
+        </DockPanel>
+
+        <DockPanel Name="PageCalendar" IsVisible="{Binding CalendarPageInitialVis}">
+        <Grid Name="PageCalendarGrid" RowDefinitions="50, *">
+                <Grid Grid.Row = "0">
+                        <DockPanel Name="PageCalendarTopbar"  IsVisible="{Binding CalendarTopbarVis}"><local:Topbar/></DockPanel>
+                        <DockPanel Name="PageCalendarTopbarStream" IsVisible="{Binding CalendarTopbarStreamVis}"><local:TopbarStream Name="PageCalendarTopbarStreamUC"/></DockPanel>
+                </Grid>
+        <local:CalendarPage Name="PageCalendarUC" Grid.Row="1"/>
+        </Grid>
+        </DockPanel>
+        <DockPanel Name="PageEventView" IsVisible="{Binding EventViewPageInitialVis}">
+                <local:EventView Name="PageEventViewUC"/>
+        </DockPanel>
+        <DockPanel Name="PageEventCreate" IsVisible="{Binding CreatePageInitialVis}">
+                <local:EventCreate Name="PageEventCreateUC"/>
+        </DockPanel>
+        <DockPanel Name="PageEventEdit" IsVisible="{Binding EventEditPageInitialVis}">
+                <local:EventEdit Name="PageEventEditUC"/>
+        </DockPanel>
+        <!--<DockPanel Name="PageEventView" IsVisible="{Binding EventViewPageInitialVis}">
+                <local:EventView Name="PageEventViewUC"/>
+        </DockPanel> -->
+
+        <DockPanel Name="PageOverview" IsVisible="{Binding OverviewPageInitialVis}">
+        <Grid Name="PageOverviewGrid" RowDefinitions="50, *">
+                <Grid Grid.Row = "0">
+                        <DockPanel  Name="PageOverviewTopbar" IsVisible="{Binding OverviewTopbarVis}"><local:Topbar/></DockPanel>
+                </Grid>
+        <local:OverviewPage Name="PageOverviewUC" Grid.Row="1"/>
+        </Grid>
+        </DockPanel>
+
+        <DockPanel Name="PageGoals" IsVisible="{Binding GoalsPageInitialVis}">
+        <Grid Name="PageGoalsGrid" RowDefinitions="50, *">
+                <Grid Grid.Row = "0">
+                        <DockPanel  Name="PageGoalsTopbar" IsVisible="{Binding GoalsTopbarVis}"><local:Topbar/></DockPanel>
+                </Grid>
+        <local:GoalsPage Name="PageGoalsUC" Grid.Row="1"/>
+        </Grid>
+        </DockPanel>
+
+        <DockPanel Name="PagePref" IsVisible="{Binding PrefPageInitialVis}">
+        <Grid Name="PagePrefGrid" RowDefinitions="50, *">
+                <Grid Grid.Row = "0">
+                        <DockPanel  Name="PagePrefTopbar" IsVisible="{Binding PrefTopbarVis}"><local:Topbar/></DockPanel>
+                        <DockPanel Name="PagePrefTopbarStream" IsVisible="{Binding PrefTopbarStreamVis}"><local:TopbarStream Name="PagePrefTopbarStreamUC"/></DockPanel>
+                </Grid>
+        <local:PrefPage Name="PagePrefUC" Grid.Row="1"/>
+        </Grid>
+        </DockPanel>
+
+        </Grid>
+</Window>

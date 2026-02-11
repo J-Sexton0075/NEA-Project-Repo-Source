@@ -1,0 +1,1701 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        
+        <!-- Initial Page Styles -->
+        <Style Selector="TextBlock.InitDefaultText">
+                <Setter Property="Foreground" Value="{DynamicResource InitText}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="25"/>
+        </Style>
+        <Style Selector="Grid.InitDefaultGridOuter">
+                <Setter Property="Background" Value="{DynamicResource InitPrimary}"/>
+        </Style>
+        <Style Selector="Grid.InitDefaultGridInner">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Background" Value="{DynamicResource InitSecondary}"/>
+                <Setter Property="Height" Value="320"/>
+                <Setter Property="Width" Value="320"/>
+        </Style>
+        <Style Selector="Border.InitDefaultBorder">
+                <Setter Property="Background" Value="{DynamicResource InitSecondary}"/>
+                <Setter Property="BorderThickness" Value="10"/>
+        </Style>
+        <Style Selector="TextBox.InitDefaultTextBox"> 
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Width" Value="260"/>
+                <Setter Property="Watermark" Value="Input Calendar Name"/>
+        </Style>
+        <Style Selector="Button.InitButton">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Width" Value="240"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+
+        </Style>
+        <Style Selector="ComboBox.InitComboBox">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Width" Value="240"/>
+        </Style>
+
+        <!-- Topbar Styles -->
+        <Style Selector ="Grid.TopbarMain">
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+        </Style>
+        <Style Selector="Button.TopbarButton">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="CornerRadius" Value="6"/>
+                <Setter Property="Margin" Value="6"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <Style Selector="Image.TopbarButtonImage">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="Button.ReturnButton">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="Height" Value="40"/>
+                <Setter Property="Width" Value="40"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="Margin" Value="4"/>
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <Style Selector="Image.ReturnButtonImage">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="Width" Value="20"/>
+        </Style> 
+        <Style Selector="StackPanel.TopbarStack">
+                <Setter Property="Orientation" Value="Horizontal"/>
+                <Setter Property="Spacing" Value="10"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="TextBlock.TopbarText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="Button.StreamPrefButton">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="Height" Value="40"/>
+                <Setter Property="Width" Value="40"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="Margin" Value="4"/>
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <Style Selector="Image.StreamPrefButtonImage">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="Width" Value="20"/>
+        </Style> 
+        <Style Selector="Border.StreamHeader">
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="Margin" Value="6"/>
+        </Style>
+        <Style Selector="TextBlock.TBHeaderText">
+                <Setter Property="FontSize" Value="20"/>
+        </Style>
+
+
+        <!-- Calendar Page Styles -->
+        <Style Selector="Grid.CalendarPageMainGrid">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+        </Style>
+        <Style Selector="Border.CalendarPageMainBorder">
+                <Setter Property="BorderThickness" Value="8"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+        </Style>
+        <Style Selector="Grid.CalendarPageSidebarGrid">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+        </Style>
+        <Style Selector="Grid.CalendarPageMainElementGrid">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+        </Style>
+
+        <!-- All of these are specifically for the calendar control.-->
+        <Style Selector="Calendar.CalendarSidebarCalendarControl">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeText}"/>
+        </Style>
+        <Style Selector="CalendarDayButton">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+
+                
+                <Style Selector="^:selected">
+                        <Style Selector="^ /template/ Border#Border">
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="BorderThickness" Value="3"/>
+                        </Style>
+                        <Style Selector="^:pointerover /template/ Border#Border">
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        </Style>
+                        <Style Selector="^:pressed /template/ Border#Border">
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        </Style>
+                </Style>
+                <Style Selector="^:today">
+                        <Style Selector="^ /template/ Border#Root">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                        </Style>
+                        <Style Selector="^:pointerover /template/ Border#Border">
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        </Style>
+                        <Style Selector="^:pressed /template/ Border#Border">
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        </Style>
+                        <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                        </Style>
+                </Style>
+                <Style Selector="^:inactive">
+                        <Style Selector="^ /template/ Border#Root">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                        </Style>
+                        <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        
+                        <Style Selector="^:pointerover /template/ Border#Border">
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+        </Style>
+
+        <Style Selector="CalendarButton">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+
+                <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                </Style>  
+
+                <Style Selector="^:pointerover /template/ Border#Border">
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                </Style>
+                
+                <Style Selector="^:selected">
+                        <Style Selector="^ /template/ Border#Root">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#Border">
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                        </Style>
+
+                        <Style Selector="^:pointerover">
+                                <Style Selector="^ /template/ Border#Border">
+                                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                </Style>
+                                <Style Selector="^ /template/ Border#Root">
+                                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                                </Style>
+                        </Style>
+                </Style>
+                <Style Selector="^:inactive">
+                        <Style Selector="^ /template/ Border#Root">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        </Style>
+                        <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                        </Style>
+                </Style>
+        </Style>
+
+
+        <Style Selector="CalendarItem">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                </Style>
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                </Style>
+                <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                </Style>
+                <Style Selector="^ /template/ Button#PART_HeaderButton">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                </Style>
+                <Style Selector="^:pointerover /template/ Button#PART_HeaderButton">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                        <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                        </Style>
+                </Style>        
+        </Style>
+        <Style Selector="Path">
+                <Setter Property="Stroke" Value="{DynamicResource ThemeText}"/>
+        </Style>
+    
+        
+        
+        <!-- Back to normal styles --> 
+        <Style Selector="DockPanel.CalendarSidebarCalendarSurround">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Width" Value="300"/>
+                <Setter Property="Height" Value="350"/>
+        </Style>
+        <Style Selector="Button.CalendarSidebarButton">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="VerticalAlignment" Value="Top"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+
+        </Style>
+        <Style Selector="ComboBox.CalendarSidebarComboBox">
+                <Setter Property="VerticalAlignment" Value="Top"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                
+                <Style Selector="^ > ComboBoxItem">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+
+                        <Style Selector="^:pointerover /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^:pressed /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^:selected /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style>
+                <Style Selector="^ /template/ Popup#PART_Popup > Border#PopupBorder">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                </Style>
+
+                <Style Selector="^:pointerover /template/ Border#Background">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                </Style>
+                <Style Selector="^:pressed /template/ Border#Background">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                </Style>
+                <Style Selector="^:focus:pressed">
+                        <Style Selector="^ /template/ ContentControl#ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ TextBlock#PlaceholderTextBlock">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ PathIcon#DropDownGlyph">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style>
+                <Style Selector="^:focus-visible">
+                        <Style Selector="^ /template/ Border#HighlightBackground">
+                                <Setter Property="IsVisible" Value="True" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}" />
+                        </Style>
+                        <Style Selector="^ /template/ ContentControl#ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ TextBlock#PlaceholderTextBlock">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ PathIcon#DropDownGlyph">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style> 
+        </Style>
+        <!-- These styles are specifically for the calendar event display -->
+        <!-- Top_n -->
+        <Style Selector="Grid.CDTPanel">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+        </Style>
+        <Style Selector="Grid.CDTGrid">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+        </Style>
+        <Style Selector="Border.CDTBorder">
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="BorderThickness" Value="5"/>
+        </Style>
+        <Style Selector="Button.CETButton">
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Margin" Value="4"/>
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        
+        <Style Selector="TextBlock.CETButtonText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+        </Style>
+        <Style Selector="TextBlock.CDTTextHeader">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <!-- Detailed --> 
+        <Style Selector="Grid.CDDPanel">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+        </Style>
+        <Style Selector="Grid.CDDMainOuterGrid">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+        </Style>
+        <Style Selector="Border.CDDBorder">
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="BorderThickness" Value="5"/>
+        </Style>
+        <Style Selector="TextBlock.CDDTextHeader">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="Grid.CDDTimeSidebar">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+        </Style>
+        <Style Selector="Grid.CDDMainInnerGrid">
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+        </Style>
+        <Style Selector="TextBlock.CDDSidebarText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="DockPanel.CDDSidebarTextContainer">
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        </Style>
+        <Style Selector="Button.CECButton"> <!-- No Longer Used As Of Now --> 
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="BorderThickness" Value="0"/>
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <Style Selector="Border.CECBorder">
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+        <Style Selector="TextBlock.CECText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        </Style>
+        <Style Selector="TextBlock.CECSmaller">
+                <Setter Property="FontSize" Value="7"/>
+        </Style>
+        <Style Selector="TextBlock.CECLarger">
+                <Setter Property="FontSize" Value="10"/>
+        </Style>
+
+        <Style Selector="Border.CECFirst"> <!-- A special control to add properties to the first
+                                                        one of these Borders in a 'run' of chunks. -->
+                <Setter Property="CornerRadius" Value="20,0"/>   
+        </Style> 
+        <Style Selector="Border.CECLast"> <!-- Same but for the last chunk in a run. -->
+                <Setter Property="CornerRadius" Value="0,20"/> 
+        </Style>
+        <!-- Event View Page -->
+        <Style Selector="Grid.EVMain">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+        </Style>
+        <Style Selector="Grid.EVDataBar">
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="Margin" Value="4"/>
+        </Style>
+        <Style Selector="TextBlock.EVTitleText">
+                <Setter Property="FontSize" Value="40"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Padding" Value="10,5,5,5"/>
+        </Style>
+
+        <Style Selector="TextBlock.EVDataBox">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Padding" Value="20,5,5,5"/>
+        </Style>
+        <Style Selector="TextBlock.EVDescBox"> <!-- Takes priority with the vertical alignment for this specific text block
+                                                    Over the rest of the DataBoxes--> 
+                <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+        <Style Selector="DockPanel.EVOverlaps">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="ComboBox.EVOverlappedEvents">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                
+                <Style Selector="^ > ComboBoxItem">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+
+                        <Style Selector="^:pointerover /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^:pressed /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^:selected /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style>
+                <Style Selector="^ /template/ Popup#PART_Popup > Border#PopupBorder">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                </Style>
+
+                <Style Selector="^:pointerover /template/ Border#Background">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                </Style>
+                <Style Selector="^:pressed /template/ Border#Background">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                </Style>
+                <Style Selector="^:focus:pressed">
+                        <Style Selector="^ /template/ ContentControl#ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ TextBlock#PlaceholderTextBlock">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ PathIcon#DropDownGlyph">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style>
+                <Style Selector="^:focus-visible">
+                        <Style Selector="^ /template/ Border#HighlightBackground">
+                                <Setter Property="IsVisible" Value="True" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}" />
+                        </Style>
+                        <Style Selector="^ /template/ ContentControl#ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ TextBlock#PlaceholderTextBlock">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ PathIcon#DropDownGlyph">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style> 
+        </Style>
+        <Style Selector="TextBlock.EVAdditionalText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="Padding" Value="10,5,5,5"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="DockPanel.EVComplete">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="CheckBox.EVCompleteEvent">
+                <Setter Property="Margin" Value="20,5,5,5"/>
+        </Style>
+        <Style Selector="StackPanel.EVEditButtonStack">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="Image.EVButtonImage">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="Button.EVButton">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="Height" Value="40"/>
+                <Setter Property="Width" Value="40"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="Margin" Value="4"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <!-- Event Create Page -->
+        <Style Selector="Grid.ECMain">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+        </Style>
+        <Style Selector="Grid.ECInputArea">
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="Margin" Value="4"/>
+        </Style>
+        <Style Selector="Grid.EC1EmbeddedInputArea">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="Margin" Value="4"/>
+        </Style>
+        <Style Selector="TextBlock.ECLabelText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="TextAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="10,0,0,0"/>
+        </Style>
+        <Style Selector="TextBlock.ECInputText">
+                <Setter Property="TextAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+        </Style>
+        <Style Selector="TextBox.ECInputBox">
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="CaretBrush" Value="{DynamicResource ThemeAccent}"/>
+
+                <Style Selector="^:focus">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:pointerover">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:focus">
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+        </Style>
+        <Style Selector="TimePicker.ECDTimePicker">
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="MinuteIncrement" Value="5"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+
+                <Style Selector="^:hasnotime /template/ Button#PART_FlyoutButton TextBlock">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                </Style>
+
+                <Style Selector="^ /template/ Rectangle#PART_FirstColumnDivider">
+                        <Setter Property="Fill" Value="{DynamicResource ThemeSecondary}"/>
+                </Style>
+
+        </Style>
+        <Style Selector="DatePicker.ECDDatePicker">
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+
+                <Style Selector="^:hasnodate /template/ Button#PART_FlyoutButton TextBlock">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                </Style>
+
+                <Style Selector="^ /template/ Rectangle#PART_FirstSpacer">
+                        <Setter Property="Fill" Value="{DynamicResource ThemeSecondary}"/>
+                </Style>
+                <Style Selector="^ /template/ Rectangle#PART_SecondSpacer">
+                        <Setter Property="Fill" Value="{DynamicResource ThemeSecondary}"/>
+                </Style>
+                <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeAccent}"/>
+                </Style>
+
+                <Style Selector="^ /template/ Popup#PART_Popup">
+                        <!-- I cannot work out how to do this, unfortunately. The source code is just so differently structured here.  -->
+                </Style>
+
+
+        </Style>
+        <Style Selector="TextBox.ECDPrioirtyBox">
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="Width" Value="50"/>
+                <Setter Property="Margin" Value="20,0,0,0"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="CaretBrush" Value="{DynamicResource ThemeAccent}"/>
+
+                <Style Selector="^:focus">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:pointerover">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:focus">
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+        </Style>
+        <Style Selector="CheckBox.ECDCheckBox">
+                <Setter Property="Margin" Value="20,0,0,0"/>
+                <Style Selector="^ /template/ Border#NormalRectangle">
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}" />
+                </Style>
+        </Style>
+        <Style Selector="ComboBox.ECDComboBox">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="20,0,0,0"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                
+                <Style Selector="^ > ComboBoxItem">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+
+                        <Style Selector="^:pointerover /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^:pressed /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^:selected /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style>
+                <Style Selector="^ /template/ Popup#PART_Popup > Border#PopupBorder">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                </Style>
+
+                <Style Selector="^:pointerover /template/ Border#Background">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                </Style>
+                <Style Selector="^:pressed /template/ Border#Background">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                </Style>
+                <Style Selector="^:focus:pressed">
+                        <Style Selector="^ /template/ ContentControl#ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ TextBlock#PlaceholderTextBlock">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ PathIcon#DropDownGlyph">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style>
+                <Style Selector="^:focus-visible">
+                        <Style Selector="^ /template/ Border#HighlightBackground">
+                                <Setter Property="IsVisible" Value="True" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}" />
+                        </Style>
+                        <Style Selector="^ /template/ ContentControl#ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ TextBlock#PlaceholderTextBlock">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ PathIcon#DropDownGlyph">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style> 
+        </Style>
+        
+        <Style Selector="Button.ECButton">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="VerticalAlignment" Value="Top"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+               
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <Style Selector="TextBlock.ECAlertText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="25"/>
+        </Style>
+        <Style Selector="DatePicker.ECDDPCentre">
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="Button.ECARExcludeButton">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Right"/>
+
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <!-- Automatic Suggestions  -->
+        <Style Selector="Grid.ECASSelector">
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+        </Style>
+        <Style Selector="DockPanel.ECASSuggestions">
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+        </Style>
+        <Style Selector="TextBlock.ECASSelectorText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="Button.ECASSelectorButton">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Right"/>
+
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <!-- Repeated Events  -->
+        <Style Selector="Grid.ECREMain">
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+        </Style>
+        <Style Selector="DockPanel.ECARExcluded">
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+        </Style>
+        <Style Selector="TextBlock.ECREText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="Button.ECREDisable">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Right"/>
+
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <Style Selector="ComboBox.ECARClassComboBox">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="20,0,0,0"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                
+                <Style Selector="^ > ComboBoxItem">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+
+                        <Style Selector="^:pointerover /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^:pressed /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^:selected /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style>
+                <Style Selector="^ /template/ Popup#PART_Popup > Border#PopupBorder">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                </Style>
+
+                <Style Selector="^:pointerover /template/ Border#Background">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                </Style>
+                <Style Selector="^:pressed /template/ Border#Background">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                </Style>
+                <Style Selector="^:focus:pressed">
+                        <Style Selector="^ /template/ ContentControl#ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ TextBlock#PlaceholderTextBlock">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ PathIcon#DropDownGlyph">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style>
+                <Style Selector="^:focus-visible">
+                        <Style Selector="^ /template/ Border#HighlightBackground">
+                                <Setter Property="IsVisible" Value="True" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}" />
+                        </Style>
+                        <Style Selector="^ /template/ ContentControl#ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ TextBlock#PlaceholderTextBlock">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ PathIcon#DropDownGlyph">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style> 
+        </Style>
+
+        <!-- Overview & Insights Page  -->
+        <Style Selector="Grid.OverviewPageMain">
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+        </Style>
+        <Style Selector="Grid.OverviewPageTopbar">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+        </Style>
+        <Style Selector="Grid.OverviewPageMainBox">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+        </Style>
+        <Style Selector="Grid.OVMBTop">
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+        </Style>
+        <Style Selector="TextBlock.OVMBTText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="TextBlock.OVTExplainBox">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+                <Style Selector="Button.OVTCompareButton">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Margin" Value="20,0,20,0"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <Style Selector="TextBlock.OVTText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="20,0,20,0"/>
+        </Style>
+        <Style Selector="ComboBox.OVTComboBox">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="10,0,0,0"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                
+                <Style Selector="^ > ComboBoxItem">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+
+                        <Style Selector="^:pointerover /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^:pressed /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^:selected /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style>
+                <Style Selector="^ /template/ Popup#PART_Popup > Border#PopupBorder">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                </Style>
+
+                <Style Selector="^:pointerover /template/ Border#Background">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                </Style>
+                <Style Selector="^:pressed /template/ Border#Background">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                </Style>
+                <Style Selector="^:focus:pressed">
+                        <Style Selector="^ /template/ ContentControl#ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ TextBlock#PlaceholderTextBlock">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ PathIcon#DropDownGlyph">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style>
+                <Style Selector="^:focus-visible">
+                        <Style Selector="^ /template/ Border#HighlightBackground">
+                                <Setter Property="IsVisible" Value="True" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}" />
+                        </Style>
+                        <Style Selector="^ /template/ ContentControl#ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ TextBlock#PlaceholderTextBlock">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ PathIcon#DropDownGlyph">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style> 
+        </Style>
+        <Style Selector="Border.OBBorder">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="BorderThickness" Value="7"/>
+        </Style>
+        <Style Selector="TextBlock.OBTextName">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="VerticalAlignment" Value="Top"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="0,20,0,0"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style Selector="TextBlock.OBTextDesc">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+       <!-- Goals And Logging Page -->
+       <!-- Goals -->
+        <Style Selector="Grid.GoalMain">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+        </Style>
+        <Style Selector="TextBlock.GoalText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="FontSize" Value="17"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="20,0,0,0"/>
+        </Style>
+        <Style Selector="Button.GoalButton">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Margin" Value="20,0,20,0"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <Style Selector="ComboBox.GITypeCombo">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="10,0,0,0"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                
+                <Style Selector="^ > ComboBoxItem">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+
+                        <Style Selector="^:pointerover /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^:pressed /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^:selected /template/ ContentPresenter">
+                                <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style>
+                <Style Selector="^ /template/ Popup#PART_Popup > Border#PopupBorder">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                </Style>
+
+                <Style Selector="^:pointerover /template/ Border#Background">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                </Style>
+                <Style Selector="^:pressed /template/ Border#Background">
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                </Style>
+                <Style Selector="^:focus:pressed">
+                        <Style Selector="^ /template/ ContentControl#ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ TextBlock#PlaceholderTextBlock">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ PathIcon#DropDownGlyph">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style>
+                <Style Selector="^:focus-visible">
+                        <Style Selector="^ /template/ Border#HighlightBackground">
+                                <Setter Property="IsVisible" Value="True" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}" />
+                        </Style>
+                        <Style Selector="^ /template/ ContentControl#ContentPresenter">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ TextBlock#PlaceholderTextBlock">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                        <Style Selector="^ /template/ PathIcon#DropDownGlyph">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+                </Style> 
+        </Style>
+        <Style Selector="TextBox.GIMagnitudeBox">
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="Width" Value="50"/>
+                <Setter Property="Margin" Value="20,0,0,0"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="CaretBrush" Value="{DynamicResource ThemeAccent}"/>
+
+                <Style Selector="^:focus">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:pointerover">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:focus">
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+        </Style>
+        <!-- Logging  -->
+        <Style Selector="Grid.LogMain">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>                
+        </Style>
+        <Style Selector="TextBlock.LogTextHead">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="20,0,0,0"/>
+                <Setter Property="FontSize" Value="17"/>
+        </Style>
+        <Style Selector="TextBlock.LSEHText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="12"/>
+        </Style>
+        <Style Selector="TextBlock.LSAText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="15"/>
+        </Style>
+
+        <Style Selector="Border.LSB">
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="BorderThickness" Value="15"/>
+        </Style>
+        <Style Selector="TextBox.LSABox">
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="20,0,0,0"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="CaretBrush" Value="{DynamicResource ThemeAccent}"/>
+
+                <Style Selector="^:focus">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:pointerover">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:focus">
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+        </Style>
+        <Style Selector="Button.LSASubmitButton">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Margin" Value="20,0,20,0"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <!-- Goals-Logging - Logging - Study Block -->
+        <Style Selector="TextBlock.GPSBText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="TextBox.GPSBPercentage">
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="CaretBrush" Value="{DynamicResource ThemeAccent}"/>
+
+                <Style Selector="^:focus">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:pointerover">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:focus">
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+        </Style>
+        <Style Selector="CheckBox.GPSBCheck">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Style Selector="^ /template/ Border#NormalRectangle">
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}" />
+                </Style>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="Button.GPSBButton">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <!-- Preferences Page -->
+        <Style Selector="TextBlock.PMTTextBlock">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="Grid.PrefMain">
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+        </Style>
+        <Style Selector="Border.PMTBorder">
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="BorderThickness" Value="15"/>
+        </Style>
+        <Style Selector="Button.PMOButton">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="0,0,20,0"/>
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <Style Selector="Button.UnfriendlyButton">
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeWarning}"/>
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeWarning}"/>
+                </Style>
+        </Style>
+        <Style Selector="TextBlock.PMOText">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="FontSize" Value="15"/>
+        </Style>
+        <Style Selector="TextBlock.PMONTPreview">
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="Margin" Value="15,5,15,5"/>
+                <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="TextBox.PMONTBox">
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="CaretBrush" Value="{DynamicResource ThemeAccent}"/>
+
+                <Style Selector="^:focus">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:pointerover">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:focus">
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+        </Style>
+        <Style Selector="ToggleSwitch.PMO1StreamlinedSwitch">
+                <Setter Property="HorizontalAlignment" Value="Right"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="20,0,20,0"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                <Style Selector="^:checked /template/ Border#SwitchKnobBounds"> 
+                        <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                </Style> 
+                
+                <Style Selector="^ /template/ Border#OuterBorder">
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                </Style>
+        </Style>
+        <Style Selector="Button.PPCSButton">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <Style Selector="Border.PPCSBorder">
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="BorderThickness" Value="10"/>
+                <Setter Property="Margin" Value="20,0,0,0"/>
+        </Style>
+        <Style Selector="Button.PMCCSubmit">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="0,0,20,0"/>
+
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+        <Style Selector="TextBlock.PMCCLabel">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+        </Style>
+        <Style Selector="TextBox.PMCCHex">
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="CaretBrush" Value="{DynamicResource ThemeAccent}"/>
+
+                <Style Selector="^:focus">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:pointerover">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:focus">
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+        </Style>
+        <Style Selector="Rectangle.PMCCPreview">
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Fill" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="Margin" Value="20,5,20,5"/>
+        </Style>
+        <!-- Preferences Page - Event Type Block -->
+        <Style Selector="Border.PPETBorder">
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="BorderThickness" Value="8"/>
+        </Style>
+        <Style Selector="TextBlock.PPETText">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="20,0,0,0"/>
+        </Style>
+        <Style Selector="TextBox.PPETBox">
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="CaretBrush" Value="{DynamicResource ThemeAccent}"/>
+
+                <Style Selector="^:focus">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:pointerover">
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+
+                        <Style Selector="^ /template/ TextBlock#PART_Watermark">
+                                <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                        </Style>
+
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="Background" Value="{DynamicResource ThemeSecondary}"/>
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+                <Style Selector="^:focus">
+                        <Style Selector="^ /template/ Border#PART_BorderElement">
+                                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                        </Style>
+                </Style>
+        </Style>
+        <Style Selector="Button.PPETButton">
+                <Setter Property="Foreground" Value="{DynamicResource ThemeText}"/>
+                <Setter Property="Background" Value="{DynamicResource ThemePrimary}"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="8,4,8,4"/>
+                <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+                        <Setter Property="Background" Value="{DynamicResource ThemePrimary}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccent}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ThemeText}" />
+                </Style>
+        </Style>
+
+        
+        <!-- General Styles -->
+        <Style Selector="TextBox.BasicTextBox"> 
+                <Setter Property="AcceptsReturn" Value="False"/>
+                <Setter Property="AcceptsTab" Value="False"/>
+                <Setter Property="ClearSelectionOnLostFocus" Value="True"/>
+                <Setter Property="Focusable" Value="True"/>
+        </Style>
+        
+        <!-- General Font Classes --> 
+        <Style Selector="TextBlock.BLFontClass">
+                <Setter Property="FontFamily" Value="{DynamicResource ProximaRegular}"/>
+        </Style>
+        <Style Selector="TextBox.BOFontClass">
+                <Setter Property="FontFamily" Value="{DynamicResource ProximaRegular}"/>
+        </Style>
+        <Style Selector="Button.BUFontClass">
+                <Setter Property="FontFamily" Value="{DynamicResource ProximaRegular}"/>
+        </Style>
+        <Style Selector="ComboBox.CBFontClass">
+                <Setter Property="FontFamily" Value="{DynamicResource ProximaRegular}"/>
+        </Style>
+
+
+</Styles>

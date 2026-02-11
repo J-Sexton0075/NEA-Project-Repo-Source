@@ -1,0 +1,34 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="350"
+    x:Class="project_main.OverviewPage">
+
+
+    <Grid Name="OVMain" Classes="OverviewPageMain" RowDefinitions="*,8*">
+        <Grid Name="OVTopbar" Classes="OverviewPageTopbar" ColumnDefinitions="*,*,*,*" Grid.Row="0">
+            <DockPanel Name="OVTType" Classes="OVTType" Grid.Column="0">
+                <TextBlock Name="OVTTText" Classes="OVTText BLFontClass" DockPanel.Dock="Left" Text="{Binding OVTTTextBinding}"/>
+                <ComboBox Name="OVTTComboBox" Classes="OVTComboBox" SelectionChanged="TriggerSetTypeDescription" DockPanel.Dock="Right"/>
+            </DockPanel>
+            <DockPanel Name="OVTRange" Classes="OVTRange" Grid.Column="1">
+                <TextBlock Name="OVTRText" Classes="OVTText BLFontClass" DockPanel.Dock="Left" Text="{Binding OVTRTextBinding}"/>
+                <ComboBox Name="OVTRComboBox" Classes="OVTComboBox CBFontFamily" DockPanel.Dock="Right"/>    
+            </DockPanel>
+            <Button Name="OVTCompare" Classes="BUFontClass OVTCompareButton" Grid.Column="2" Content="{Binding CompareButtonTextBinding}" Click="CompareClick"/>
+            <TextBlock Name="OVTExplain" Classes="BLFontClass OVTExplainBox" Text="{Binding ExplainDefaultText}" Grid.Column="3"/>
+        </Grid>
+
+        <Grid Name="OVMainBox" Classes="OverviewPageMainBox" RowDefinitions="*,7*" Grid.Row="1">
+            <Grid Name="OVMBTop" Classes="OVMBTop" ColumnDefinitions="*,*" Grid.Row="0">
+                <TextBlock Name="OVMBTText1" Classes="OVMBTText BLFontClass" Grid.Column="0"/>
+                <TextBlock Name="OVMBTText2" Classes="OVMBTText BLFontClass" Grid.Column="1"/>
+            </Grid>
+
+            <ScrollViewer Name="OVBMScroll" Grid.Row="1"><DockPanel Name="OVMBBlockContainer" Classes="OVMBBlockContainer">
+            </DockPanel></ScrollViewer>
+        </Grid>
+    </Grid>
+   
+</UserControl>

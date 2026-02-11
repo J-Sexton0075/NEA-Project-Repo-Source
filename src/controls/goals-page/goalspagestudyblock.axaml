@@ -1,0 +1,21 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="350"
+    x:Class="project_main.GoalsPageStudyBlock"
+    DockPanel.Dock="Bottom">
+
+    <Grid Name="GPSBMain" Classes="GPSBMain" ColumnDefinitions="5*,*,*,*,*,*,*">
+
+        <TextBlock Name="GPSBText" Classes="BLFontClass GPSBText" Grid.Column="0"/>
+        <CheckBox Name="GPSBCheckComplete" Classes="GPSBCheck" Click="CheckedHandler" Grid.Column="1"/>
+        <CheckBox Name="GPSBCheckIncomplete" Classes="GPSBCheck" Click="CheckedHandler" Grid.Column="2"/>
+        <CheckBox Name="GPSBCheckPartial" Classes="GPSBCheck" Click="CheckedHandler" Grid.Column="3"/>
+        <TextBox Name="PartialPercentage" Classes="GPSBPercentage BOFontCLass BasicTextBox" Grid.Column="4"/>
+        <Button Name="GPSBSave" Classes="GPSBButton BUFontClass" Content="{Binding SaveButton}" Click="SaveHandler" Grid.Column="5"/>
+        <Button Name="GPSBClearSurplus" Classes="GPSBButton BUFontClass" Content="{Binding DeleteButton}" IsVisible="{Binding GPSBClearDefaultVis}" Click="DeleteHandler" Grid.Column="6"/>
+        
+    </Grid>
+
+</UserControl>

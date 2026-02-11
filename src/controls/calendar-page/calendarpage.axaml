@@ -1,0 +1,36 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="960" d:DesignHeight="540"
+    x:Class="project_main.CalendarPage">
+
+    <Border Name="CalendarPageMainBorder" Classes="CalendarPageMainBorder">
+        <Grid ColumnDefinitions="315,*" Name ="CalendarPageMainGrid" Classes="CalendarPageMainGrid">
+            <Grid Name="Sidebar" Grid.Column="0" RowDefinitions="*,350,*,*,2*,*" Classes="CalendarPageSidebarGrid">
+                <DockPanel Name="SidebarButtonSurroundA" Grid.Row="0">
+                    <Button Name="Sidebar0NewCalendarButton" Classes="CalendarSidebarButton BUFontClass" Content="{Binding NewButtonText}" Click="CreateButtonPress"></Button>
+                </DockPanel>
+                <DockPanel Name="CalendarSurround" Classes="CalendarSidebarCalendarSurround" Grid.Row="1">
+                    <Calendar Name="Sidebar1CalendarPicker" Classes="CalendarSidebarCalendarControl"></Calendar>
+                </DockPanel>
+                <DockPanel Name="SidebarPickerSurround" Grid.Row="2">
+                    <ComboBox Name="Sidebar2RangePicker" Classes="CalendarSidebarComboBox"></ComboBox>
+                </DockPanel>
+                <DockPanel Name="SidebarButtonSurroundB" Grid.Row="3">
+                    <Button Name="Sidebar3UpdateButton" Classes="CalendarSidebarButton BUFontClass" Content="{Binding UpdateButtonText}"
+                    Click="UpdateCalendarPage"></Button>
+                </DockPanel>
+                <DockPanel Name="Sidebar4FilteringTools" Classes="CalendarSidebarBox" Grid.Row="4">
+                    <ComboBox Name="SidebarFilterTypes" Classes="CalendarSidebarComboBox"></ComboBox>    
+                </DockPanel>
+            </Grid>
+
+
+            <Grid Name="MainElement" Grid.Column="1" Classes="CalendarPageMainElementGrid">
+                
+            </Grid>
+        </Grid>
+    </Border>
+
+</UserControl>

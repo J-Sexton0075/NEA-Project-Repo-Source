@@ -1,0 +1,21 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="Auto"
+    x:Class="project_main.InitialPage">    
+
+    <Border Name="InitDBorder" Classes="InitDefaultBorder">
+    <Grid Name="InitGOuter" RowDefinitions="*" Classes="InitDefaultGridOuter"> 
+        <Grid Name="InitGInner" RowDefinitions="*,*,*,*,*" Classes="InitDefaultGridInner"> 
+            <TextBlock Classes="InitDefaultText BLFontClass" Grid.Row="0" Text="{Binding Message}"> </TextBlock>
+            <ComboBox Name="CalendarSelectionBox" Classes="InitComboBox CBFontClass" ItemsSource="{Binding CalendarList}" Grid.Row="1"></ComboBox>
+            <Button Grid.Row="2" Name="LoadCalendarButton" Classes="InitButton BUFontClass" Content="{Binding Button1Text}"
+            Click="LoadCalendarClick"></Button>
+            <Button Grid.Row="3" Name="NewCalendarButton" Classes="InitButton BUFontClass" Content="{Binding Button2Text}"
+            Click="NewCalendarClick"></Button>
+            <TextBox Grid.Row="4" Name="NewCalendarInput" Classes="InitDefaultTextBox BasicTextBox BOFontClass"  IsVisible="{Binding TextBoxVisibility}" ></TextBox>
+        </Grid>
+    </Grid>
+    </Border>
+</UserControl>

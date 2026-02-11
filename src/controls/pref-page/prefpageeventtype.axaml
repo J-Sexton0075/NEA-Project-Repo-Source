@@ -1,0 +1,18 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="350"
+    x:Class="project_main.PrefPageEventType"
+    DockPanel.Dock="Top">
+
+    <Border Name="MainBorder" Classes="PPETBorder">
+        <Grid Name="Main" Classes="PPETMainGrid" ColumnDefinitions="3*,*,*,*">
+            <TextBlock Name="PPETEventName" Classes="PPETText BLFontClass" Grid.Column="0"/>
+            <TextBox Name="PPETEventColour" Watermark="{Binding ColourWatermark}" Classes="PPETBox BOFontClass BasicTextBox" Grid.Column="1"/>
+            <Button Name="PPETSave" Classes="PPETButton BUFontClass" Content="{Binding ButtonTextSave}" Click="ButtonClickSave" Grid.Column="2"/>
+            <Button Name="PPETDelete" Classes="PPETButton BUFontClass" Content="{Binding ButtonTextDelete}" Click="ButtonClickDelete" Grid.Column="3"/> 
+        </Grid>
+    </Border>
+
+</UserControl>

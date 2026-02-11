@@ -1,0 +1,31 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="50"
+    x:Class="project_main.TopbarStream">
+
+
+    <Grid ColumnDefinitions="*, 50, 50" Classes="TopbarMain"> 
+
+        <Border Name="StreamHeader" Grid.Column="0" Classes="StreamHeader"> 
+            <TextBlock Name="HeaderText" Classes="TopbarText BLFontClass TBHeaderText" Text="{Binding headerText}"></TextBlock>
+        </Border>
+        
+        <Button Name="StreamPrefButton" Click="TBPrefStream" Grid.Column="1" Classes="StreamPrefButton">
+            <StackPanel Classes="TopbarStack">
+                <Image Classes="StreamPrefButtonImage" Source="avares://project-main/src/assets/images/NEA_Pref_Calendar.png"></Image>
+            </StackPanel>
+        </Button>
+
+        <Button Name="StreamReturnButton" Click="TBReturnStream" Grid.Column="2" Classes="ReturnButton">
+            <StackPanel Classes="TopbarStack">
+                <Image Classes="ReturnButtonImage" Source="avares://project-main/src/assets/images/NEA_Init.png"></Image>
+            </StackPanel>
+        </Button>
+
+    </Grid> 
+        
+
+    
+</UserControl>
